@@ -1,4 +1,4 @@
-![Hallo](http://i.imgur.com/NypnvV3.gif)
+![Yo](http://i.imgur.com/NypnvV3.gif)
 
 My name is Jordan Buckley. I'm from Seattle but I've lived in some other places, like Maine, Alabama, Kentucky, and Scotland. 
 
