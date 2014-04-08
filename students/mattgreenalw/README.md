@@ -17,9 +17,9 @@
 ####We are the People - Empire of the Sun
 
 ###Countries visted:
--####Thiland
--####Japan
--####Germany
--####Qatar
--####Iraq
--####Afghanistan
+- ####Thiland
+- ####Japan
+- ####Germany
+- ####Qatar
+- ####Iraq
+- ####Afghanistan
