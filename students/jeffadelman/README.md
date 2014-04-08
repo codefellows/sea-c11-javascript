@@ -1,5 +1,7 @@
 #Jeff Adelman
 
+![](https://farm4.staticflickr.com/3802/13708696734_831b4ce53c.jpg)
+
 ###Hello! 
 
 I am a new transplant to the Seattle area from Los Angeles. I've worked in the entertainment industry (both in front of and behind the camera) for 15 years. I've always been interested in computers and in 2009 was hired to work at TMZ.com. Working with TMZ got me really interested in the tech side of the entertainment business and I started looking at ways to get more involved. That's how I discovered coding and I love it! I've been teaching myself on CodeAcademy, Treehouse and other sites and am really excited to be starting the Code Fellows Level 2 JavaScript training! Really looking forward to it!!
