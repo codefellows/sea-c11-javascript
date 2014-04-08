@@ -1,6 +1,6 @@
 # Lawrence Fritts aka Larry
 
-## Goal: My goal is to become the best **python machine learning developer** in Seattle.
+## Goal: My goal is to become the best python machine learning developer in Seattle.
 Code Fellows will provide the instruction and practice I need to get that first
 python developer job while I continue my studies in machine learning on my own.
 
