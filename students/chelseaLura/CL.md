@@ -15,4 +15,4 @@ ____
 	- Cooking
 	- Watching media on my Roku
 	- Espresso connoisseur
-		- Favorite drink order: espresso macchiatto (traditional) on the dry-side.  
+		- Favorite drink order: espresso macchiato (traditional) on the dry-side.  
