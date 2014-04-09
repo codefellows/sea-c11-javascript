@@ -1,4 +1,4 @@
-![alt text]("http://i62.tinypic.com/35k97dl.png" "Hello ^_^")
+![LuraPic](http://i62.tinypic.com/35k97dl.jpg)
 
 ##Chelsea Lura##
 [My Twitter](https://twitter.com/ChelsLura "Chelsea Lura's Twitter Page")
