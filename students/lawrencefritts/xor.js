@@ -6,7 +6,7 @@
 // Version: 1.0
 
 function preferredName(firstName, lastName) {
-    //check for xor conditions                                              if FirstName; else LastName
-    return (firstName && lastName) || (!firstName && !lastName) ? false : firstName ? firstName : lastName;
+    //check for xor conditions                                        if FirstName; else LastName
+    return (firstName && lastName) || (!firstName && !lastName) ? false : (firstName || lastName);
 }
 
