@@ -12,7 +12,7 @@ function preferredName(first,last) {
 
 // //ternary operator approach
 // function preferredName(first, last) {
-// 	((first && last) || (!first && !last)) ? return false : return (first || last);
+// 	x = ((first && last) || (!first && !last)) ? false : (first || last);
 // 	return x
 // }
 
