@@ -1,8 +1,8 @@
 
 
-//shorter if else approach
+//if else approach
 function preferredName(first,last) {
-	if ((first && last) || (!first && !last)) {
+	if (!!first == !!last) {
 		return false;
 	} else {
 		return (first || last);
@@ -11,8 +11,7 @@ function preferredName(first,last) {
 
 
 // //ternary operator approach
-// function preferredName(first, last) {
-// 	x = ((first && last) || (!first && !last)) ? false : (first || last);
-// 	return x
+// function preferredName(first,last) {
+// 	return = (!!first == !!last) ? false : (first || last);
 // }
 
