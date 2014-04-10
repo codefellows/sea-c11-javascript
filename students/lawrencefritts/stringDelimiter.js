@@ -12,13 +12,20 @@ function stringDelimiter(inputString, delimiter) {
 
         //pushes completed string to array, increases i so next string is started
         if (inputString[i] === delimiter) {
+            //checks for an empty string
+            //for example, csv "6,,7" would indicate an empty value between 6 and 7
+            //same idea, will also check to see if empty value at beginning
+            if (inputString[i-1] === delimiter || inputString[i-1] === "") {
+                stringList.push("");
+            } else {
             stringList.push(workingString);
             workingString = "";
-            i++;
+            }
+        } else {
+            workingString = workingString + inputString[i];
         }
-        workingString = workingString + inputString[i];
     }
-    //push last string to array if not empty
+    //push last string to array if not delimited
     if (workingString) {
         stringList.push(workingString);
     }
