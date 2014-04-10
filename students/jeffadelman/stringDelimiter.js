@@ -1,14 +1,14 @@
-var stringDelimiter = function(x, y) {
+var stringDelimiter = function(inputStr, limitingChar) {
   var delimited = [];
-  while(x.indexOf(y) !== -1) {
-    var str = (x.substr(0, x.indexOf(y)));
+  while(inputStr.indexOf(limitingChar) !== -1) {
+    var str = (inputStr.substr(0, inputStr.indexOf(limitingChar)));
     if (str) {
       delimited.push(str);
     }
-    x = x.slice(x.indexOf(y)+1);
+    inputStr = inputStr.slice(inputStr.indexOf(limitingChar)+1);
   }
-  if (x){
-    delimited.push(x);
+  if (inputStr){
+    delimited.push(inputStr);
   }
   return delimited;
 };
