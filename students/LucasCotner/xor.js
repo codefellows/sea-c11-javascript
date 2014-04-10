@@ -2,12 +2,12 @@ var preferredName = function (firstName, lastName) {
     console.log("firstName = " + firstName);
     console.log("lastName = " + lastName);
     var name1, name2;
-    if (firstName === 'Lucas') {
+    if (firstName != '') {
         name1 = true;
     } else {
         name1 = false;
     }
-    if (lastName === 'Cotner') {
+    if (lastName != '') {
         name2 = true;
     } else {
         name2 = false;
