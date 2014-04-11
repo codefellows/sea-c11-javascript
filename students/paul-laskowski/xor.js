@@ -1,17 +1,6 @@
 
-
-//if else approach
+//ternary operator approach
 function preferredName(first,last) {
-	if (!!first == !!last) {
-		return false;
-	} else {
-		return (first || last);
-	}
+	return = (!!first === !!last) ? false : (first || last);
 }
-
-
-// //ternary operator approach
-// function preferredName(first,last) {
-// 	return = (!!first == !!last) ? false : (first || last);
-// }
 
