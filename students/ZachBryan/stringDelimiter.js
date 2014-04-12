@@ -1,8 +1,3 @@
-// Write a function that takes in a string seperated by a seperator, and will return an array 
-// of strings in between the seperators.
-
-var sampleInput = 'asdf$lskd1234$asdo';
-
 var stringDelemiter = function(input, breakPoint){
 	var nList = [];
 	var limit, temp;
@@ -17,5 +12,3 @@ var stringDelemiter = function(input, breakPoint){
 	}
 	return(nList);
 } ;
-stringDelemiter(sampleInput, '$');
-// -> ['asdf', 'lskd1234', 'asdo']
