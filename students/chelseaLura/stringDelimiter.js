@@ -1,7 +1,6 @@
 function stringDelimiter(input, seperator) {
     var delimiter = [];
     var finalStrings = [];
-    var newString = '';
     for (i = 0; i < input.length; i++) {
         var currentLetter = input.substring(i, i + 1);
         if (currentLetter === seperator) {
