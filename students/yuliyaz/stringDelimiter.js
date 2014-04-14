@@ -6,4 +6,14 @@ function stringDelimiter (sampleInput, delimeter){
 var result = sampleInput.split(delimeter);
 return result;
 }
-stringDelimiter(sampleInput, '$');
+
+
+
+var sampleInput = 'asdf$lskd1234$asdo';
+function stringDelimiter (){
+//var result = sampleInput.split(delimeter);
+//for (var i = 0; i < sampleInput.length; i++) {
+	var result = sampleInput.substring(sampleInput.indexOf('$'));
+	}
+return result;
+}
