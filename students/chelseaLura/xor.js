@@ -8,26 +8,3 @@ function preferredName (FirstName, LastName) {
         ? false 
         : FirstName || LastName);
 };
-
-preferredName(FirstName, LastName);
- 
-FirstName = 'Hank';
-
- 
-preferredName(FirstName, LastName);
- 
-LastName = 'Yates';
-
- 
-preferredName(FirstName, LastName);
- 
-FirstName = '';
-
- 
-preferredName(FirstName, LastName);
-
-
-
-
-
-
