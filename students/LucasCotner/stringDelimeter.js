@@ -1,18 +1,13 @@
 var stringDelimeter = function (input,seperator) {
     var strings = [];
-    var item2 = '';
-    for (i = 0; i < input.length; i++) {
-        var item = input[i];
-        if (item != seperator) {
-            item2 = item2.concat(item);
-        } else {
-            strings.push(item2);
-            item2 = '';
-        }
-        if ((i == input.length - 1) && item != seperator) {
-            strings.push(item2);
-        }
+    while(input) {
+        var sepPosition = input.indexOf(seperator);   
+        if (sepPosition === -1) {
+            sepPosition = input.length;
+        }       
+        var subString = input.substring(0,sepPosition);              
+        strings.push(subString);      
+        input = input.substring(sepPosition + 1);
     }
     return strings;
 };
-
