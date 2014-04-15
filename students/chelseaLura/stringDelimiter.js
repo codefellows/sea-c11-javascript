@@ -4,17 +4,17 @@ function stringDelimiter(input, seperator) {
     for (i = 0; i < input.length; i++) {
         var currentLetter = input.substring(i, i + 1);
         if (currentLetter === seperator) {
-          concat(delimiter, finalStrings);
+          concatDelimiter(delimiter, finalStrings);
           delimiter = [];
         } else {
             delimiter.push(currentLetter);
         }
     }
-    concat(delimiter, finalStrings);
+    concatDelimiter(delimiter, finalStrings);
     return finalStrings;
 }
 
-function concat (smallArray, largeArray) {
+function concatDelimiter (smallArray, largeArray) {
     if(smallArray.length > 0) {
       var string = smallArray.join('');
       largeArray.push(string);
