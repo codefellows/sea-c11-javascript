@@ -2,18 +2,8 @@
 
 function getPreferredName( fname, lname ) {
 	
-	if ( fname && lname )
+	if ( fname && lname || !fname && !lname)
 		return false;
 
-	if ( !fname && !lname )
-		return false;
-
-	else if ( lname )
-		return lname;
-
-	else
-		return fname;
-
+	return (fname && lname ) ? false : fname || lname;
 }
-
-// return (fname && lname ) ? false : fname || lname;
