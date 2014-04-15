@@ -4,33 +4,9 @@ var FirstName,
     LastName;
 
 function preferredName(FirstName, LastName){
-	if (FirstName){
-      if(LastName){
+	if (FirstName && !LastName) || (!FirstName && LastName){
+          return (FirstName || LastName);
+    } else
         return false;
-      } else
-        return true;
-    }else{
-      if(LastName){
-        return true;
-      }else{
-        return false;
-      }
     }
-	
 }
-// -> false
-
-FirstName = 'Hank';
-
-preferredName(FirstName, LastName);
-// -> 'Hank'
-
-LastName = 'Yates';
-
-preferredName(FirstName, LastName);
-// -> false
-
-FirstName = '';
-
-preferredName(FirstName, LastName);
-// -> 'Yates'
