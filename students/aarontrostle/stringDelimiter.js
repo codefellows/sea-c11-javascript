@@ -1,5 +1,3 @@
-// Solution to https://gist.github.com/hankyates/10230737
-
 function stringDelimiter(inputString, delimiter) {
   var results = [];
   var newString = '';
@@ -16,7 +14,3 @@ function stringDelimiter(inputString, delimiter) {
   }
   return results;
 }
-
-var sampleInput = 'asdf$lskd1234$asdo';
-
-stringDelimiter(sampleInput, '$');
