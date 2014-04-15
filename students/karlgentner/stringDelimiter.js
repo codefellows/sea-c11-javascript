@@ -1,22 +1,17 @@
-//Karl Gentner - Code Fellows F2 Javascript 4/14/14
-//String Delimiter function -  takes in a string seperated by a seperator, and will return an array 
-// of strings in between the seperators.
+/*Karl Gentner - CFF2 Javascript - stringDelimiter 4/14/14. Accepts a string seperated by a seperator and returns an array of strings in between the seperators. */
 
 
-function stringDelimiter(x,y){
-  var result = [];
-  var num = x.indexOf(y);
+function stringDelimiter(str, delimiter){ 
+  var resultArray = [];
+  var num = str.indexOf(delimiter);
   
-  while (num != -1){ // indexOf returns -1 if y is not found
-   result.push(x.substring(0,num)); //push substring to array
-   x = x.substring(num + 1, x.length); //resize string
-   num = x.indexOf(y); // find next instance of y
+  while (num != -1){ // indexOf returns -1 if delimiter is not found
+   resultArray.push(str.substring(0,num)); //push substring to array
+   str = str.substring(num + 1, str.length); //resize string
+   num = str.indexOf(delimiter); // find next instance of delimiter
   }
-  result.push(x); //push remaining string to array
-  console.log(result); 
+  resultArray.push(str); //push remaining string to array
+  return resultArray; 
 }
  
-//var sampleInput = 'asdf$lskd1234$asdo';
- 
-//stringDelimiter(sampleInput, '$');
-// -> ['asdf', 'lskd1234', 'asdo']
+
