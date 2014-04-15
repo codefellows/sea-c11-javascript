@@ -1,38 +1,12 @@
-//Karl Gentner - Code Fellows F2 Javascript 4/14/14
-//Exclusive OR function
+//Karl Gentner - CFF2 Javascript - Exclusive OR function - 4/14/2014
 
 
-function preferredName(x, y){
-// Exclusive OR 
-  if( ( x && !y ) || ( !x && y ) ) {
-    result = x ? x : y; 
+function preferredName(FirstName, LastName){
+  if( ( FirstName && !LastName ) || ( !FirstName && LastName ) ) {
+    result = FirstName ? FirstName : LastName; 
   } else {
     result = "false";
   }
-  console.log(result);
+  return result;
 }
 
-/*
-// Implement an exclusive OR function called `preferredName` that has the following interface:
-
-var FirstName,
-    LastName;
- 
-preferredName(FirstName, LastName);
-// -> false
- 
-FirstName = 'Hank';
- 
-preferredName(FirstName, LastName);
-// -> 'Hank'
- 
-LastName = 'Yates';
- 
-preferredName(FirstName, LastName);
-// -> false
- 
-FirstName = '';
- 
-preferredName(FirstName, LastName);
-// -> 'Yates'
-*/
