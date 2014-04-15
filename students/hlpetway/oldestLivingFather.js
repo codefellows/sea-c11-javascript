@@ -1,3 +1,8 @@
+// Given the following data structure
+// implement a oldestLivingFather method 
+// that will return the name of the oldest 
+// living father.
+
 var people = [{
     name: 'Hank',
     age: 29,
@@ -22,26 +27,26 @@ var people = [{
 }];
 
 var oldestLivingFather = function () {
-
-    _.pluck(people, 'age');
- 
-    var ages = _.pluck(people, 'age');
-    
-	_.max(ages);
-
-    var oldest = _.max(ages);
-
-    var oldestPerson;
+    var fathers = [];
 
     _.forEach(people, function (person, index) {
-        if (person.age === oldest) {
-            oldestPerson = person.name;
+        if ((person.father) && (person.age)) {
+            fathers.push(person.age);
         }
     });
-	
+
+    _.max(fathers);
+
+    //assign this age to a variable
+    var oldest = _.max(fathers);
+
+    var oldestFather;
+
+    //Now Search for this age in our array
     _.forEach(people, function (person, index) {
-        if (oldestPerson === person.father) {
-            console.log(oldestPerson);
+        if (person.age === oldest) {
+            oldestFather = person.name;
+            console.log(oldestFather);
         }
     });
 
