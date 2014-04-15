@@ -22,27 +22,25 @@ var people = [{
 }];
 
 var oldestLivingFather = function () {
-    var fathers = [];
+    var livingFathers = [];
 
     _.forEach(people, function (person, index) {
         if ((person.father) && (person.age)) {
-            fathers.push(person.age);
+            livingFathers.push(person.age);
         }
     });
 
-    _.max(fathers);
-
-    var oldest = _.max(fathers);
+    var oldest = _.max(livingFathers);
 
     var oldestFather;
 
     _.forEach(people, function (person, index) {
         if (person.age === oldest) {
             oldestFather = person.name;
-            console.log(oldestFather);
         }
-    });
 
+    });
+    return oldestFather;
 };
 
-oldestLivingFather();
+console.log(oldestLivingFather());
