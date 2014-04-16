@@ -12,7 +12,7 @@ function oldestLivingFather(people) {
     var livingFathers = _.filter(people, function (person) {
 
         // If the person doesn't have a name and age, we're not interested    
-        if (!person.hasOwnProperty('name') || !person.hasOwnProperty('age')) return false;
+        if (typeof person.name === 'undefined' || typeof person.age === 'undefined') return false;
 
         // Are they in our list of fathers?
         return _.contains(fatherNames, person.name);
