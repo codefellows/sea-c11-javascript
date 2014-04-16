@@ -1,23 +1,22 @@
 function stringDelimiter(input, seperator) {
-    var currentCharacters = [];
+    var currentCharacters = '';
     var finalStrings = [];
-    for (i = 0; i < input.length; i++) {
+    for (var i = 0; i < input.length; i++) {
         var currentLetter = input.charAt(i);
         if (currentLetter === seperator) {
-          pushJoinedCharacters(currentCharacters, finalStrings);
-          currentCharacters = [];
+            pushNonEmptyCharacters(currentCharacters, finalStrings);
+            currentCharacters = '';
         } else {
-            currentCharacters.push(currentLetter);
+            currentCharacters += currentLetter;
         }
     }
-    pushJoinedCharacters(currentCharacters, finalStrings);
+    pushNonEmptyCharacters(currentCharacters, finalStrings);
     return finalStrings;
 }
 
-function joinCharacters(characters, strings) {
+function pushNonEmptyCharacters(characters, strings) {
     if(characters.length > 0) {
-      var string = characters.join('');
-      strings.push(string);
+        strings.push(characters);
     }
-    
 }
+
