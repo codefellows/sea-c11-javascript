@@ -1,26 +1,23 @@
 
-function stringDelimiter(inputText, delimiter) {
-	var i, indices=[];
+function stringDelimiter(inputText, delimiter){
+	var i;
 	var parsedText=[];
-	var start = 0;
 	
-	//yikes! probably infinite empty strings to parse on.
-	if (delimiter) { 
-		// get array of delimiter start positions
-		while ((i = inputText.indexOf(delimiter,start)) > -1) {
-			indices.push(i);
-			start = i + delimiter.length;
-		}
-		// get array of strings (sans delimiter) based on delimiter start positions
-		start = 0;
-		if (indices) {
-			for (i = 0;i < indices.length;i++) {
-				parsedText.push(inputText.substring(start,indices[i]));
-				start = indices[i] + delimiter.length;
-				console.log(start);
-			}
+	if (!delimiter) {
+		parsedText.push(inputText);
+		
+	} else{
+		while(inputText){
+		
+			i = inputText.indexOf(delimiter);
+		
+			if (i == -1) i = inputText.length;
+		
+			parsedText.push(inputText.substring(0,i));
+		
+			inputText = inputText.substring(i + delimiter.length);
+		
 		}
 	}
-	parsedText.push(inputText.substring(start,inputText.length));
 	return parsedText;
 }
