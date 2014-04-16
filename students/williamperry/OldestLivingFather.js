@@ -70,6 +70,6 @@ function oldestLivingFather() {
         if (livingFather.age > oldestLivingFather.age) oldestLivingFather = livingFather 
     });
     
-    console.log(oldestLivingFather.age);
+    
 }
 oldestLivingFather();
