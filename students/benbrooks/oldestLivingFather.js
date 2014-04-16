@@ -6,7 +6,7 @@ function oldestLivingFather(people) {
     fatherNames = _.uniq(fatherNames);
 
     // Get rid of undefined names
-    fatherNames = _.without(fatherNames, undefined);
+    fatherNames = _.compact(fatherNames);
 
     // Get living fathers from people
     var livingFathers = _.filter(people, function (person) {
@@ -19,14 +19,9 @@ function oldestLivingFather(people) {
 
     });
 
-    // Get the oldest of our living fathers
-    var oldestLivingFather = {
-        name: false,
-        age: 0
-    };
-
-    _.each(livingFathers, function (livingFather) {
-        if (livingFather.age > oldestLivingFather.age) oldestLivingFather = livingFather
+    var oldestLivingFather = _.reduce(livingFathers, function (oldestLivingFather, livingFather) {
+        if (livingFather.age > oldestLivingFather.age) return livingFather;
+        else return oldestLivingFather;
     });
 
     return oldestLivingFather.name;
