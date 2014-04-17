@@ -15,25 +15,3 @@ var preferredName = function (fName, lName) {
     }
 
 };
-/*
-var FirstName,
-    LastName;
-
-console.log(preferredName(FirstName, LastName));
-// -> false
-
-FirstName = 'Hank';
-
-console.log(preferredName(FirstName, LastName));
-// -> 'Hank'
-
-LastName = 'Yates';
-
-console.log(preferredName(FirstName, LastName));
-// -> false
-
-FirstName = '';
-
-console.log(preferredName(FirstName, LastName));
-// -> 'Yates'
-    */
