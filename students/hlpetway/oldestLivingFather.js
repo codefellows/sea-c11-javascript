@@ -1,46 +1,32 @@
-var people = [{
-    name: 'Hank',
-    age: 29,
-    father: 'Don'
-}, {
-    name: 'Deborah',
-    age: 30,
-    father: 'Don'
-}, {
-    name: 'Danny',
-    age: 24,
-    father: 'Don'
-}, {
-    name: 'Don',
-    age: 64,
-    father: 'Haskell'
-}, {
-    name: 'Haskell',
-    father: 'Finus'
-}, {
-    name: 'Finus'
-}];
-
 var oldestLivingFather = function () {
-    var livingFathers = [];
+
+    var fathers = [];
 
     _.forEach(people, function (person, index) {
-        if ((person.father) && (person.age)) {
-            livingFathers.push(person.age);
+        if (person.father) {
+            fathers.push(person.father);
         }
     });
 
-    var oldest = _.max(livingFathers);
-
-    var oldestFather;
+    var agesLivingFathers = [];
 
     _.forEach(people, function (person, index) {
-        if (person.age === oldest) {
-            oldestFather = person.name;
+        for (i = 0; i < fathers.length; i++) {
+            if (fathers[i] === person.name) {
+                agesLivingFathers.push(person.age);
+            }
         }
-
     });
-    return oldestFather;
+
+    var oldestLivingFatherAge = _.max(agesLivingFathers);
+
+    _.forEach(people, function (person, index) {
+        if (oldestLivingFatherAge === person.age) {
+            oldestLivingFather = person.name;
+        }
+    });
+    
+    return oldestLivingFather;
 };
 
 console.log(oldestLivingFather());
