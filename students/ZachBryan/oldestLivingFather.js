@@ -1,14 +1,21 @@
-//stuck on comparing if the have a father listed or not.
-var oldestLivingFather = function (person){
-  //removes if age is missing
-  var isAlive = _.filter(person, 'age')
+var oldestLivingFather = function (people){
+  var fatherNames;
+  var isFather = [];
+
+    //removes if age is missing
+  var isAlive = _.filter(people, 'age');
 
   //removes if father attr is missing or not unique
-  var hasFather =  _.filter(_.uniq(isAlive, 'father'));
-
-  // var isFather = _.filter(hasFather.father && isAlive.name);
+  fatherNames =  _.uniq(_.filter(_.pluck(isAlive, 'father')));
+  
+  //itirates through father list, compares to living, pushes to new array
+  for(var i = 0; i < fatherNames.length; i++){
+    isFather.push(_.where(isAlive, {name: fatherNames[i]})[0]);
+}
+  //removes undefined
+  isFather = _.compact(isFather)
  
-  //sorts remainder by accending age
-  var oldDude = _.map(_.sortBy(hasFather, 'age'), _.values);
-  return oldDude.slice([-1]);
+  //returns highest value
+  var oldDude = _.max(isFather, 'age');
+  return oldDude.name
 };
