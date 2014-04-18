@@ -26,6 +26,26 @@ function getFathersNames() {
 };
 
 
+var highestAge = 0
+people.forEach(function(person){
+	var personName = person['name']
+	var fatherArray = getFathersNames()
+for (var i = 0; i < people.length; i++) {
+	if (fatherArray.indexOf(personName) > -1 && people[i].age && people[i].age > highestAge) {
+				highestAge = people[i].age;
+			}
+		}
+return highestAge 
+	
+});
+
+		> -1 && person['age'] === oldestAge){
+		var oldestFatherName = person['name'];
+}
+return oldestFatherName
+});
+
+
 people.forEach(function(person){
 	var personName = person['name']
 	var fatherArray = getFathersNames()
@@ -36,7 +56,30 @@ people.forEach(function(person){
 return oldestFatherName
 });
 
+var highestAge = 0
+people.forEach(function(person){
+	var personName = person['name']
+	var fatherArray = getFathersNames()
+	if (fatherArray.indexOf(personName) > -1) {
+for (var i = 0; i < people.length; i++) {
+	if (people[i].age && people[i].age > highestAge) {
+				highestAge = people[i].age;
+			}
+		}
+return highestAge
+	} 
+	
+});
 
 
-
+var highestAge = 0
+people.forEach(function(person){
+	var personName = person['name']
+	var fatherArray = getFathersNames()
+	var fatherArrayDetails = []
+	people.filter(function(person) 
+		fatherArrayDetails.push(person)
+		return fatherArrayDetails
+	});
+});
 
