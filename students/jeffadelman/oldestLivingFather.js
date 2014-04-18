@@ -1,41 +1,20 @@
-var oldestLivingFather = function(people){
-  var fathersArray = [],
-      livingPeople = [],
-      oldestLivingFather = false;
+var oldestLivingFather = function(input){
 
-  //Find all the fathers and push their names to the fathersArray
-  for(i=0; i< people.length; i++){
-    var father = people[i].father;
-    if (father){
-      if (fathersArray.indexOf(father) == -1){
-      fathersArray.push(father);
-      }
-    }
-  }
+  //Find names of all fathers
+  var fatherNames = _.compact(_.uniq(_.pluck(input, 'father')));
 
-  //Find all the living people and push them to the livingPeople array
-  for(i=0; i<people.length; i++){
-    var person = people[i];
-    if(person.age){
-      livingPeople.push(person);
-    }
-  }
-
-  //Sort the livingPeople array by age
-  livingPeople.sort(function(a,b) { 
-    return ~~b.age - ~~a.age; 
+  //Create an array of only fathers
+  var fathers = _.filter(input, function(person){
+      return _.contains(fatherNames, person.name);
   });
 
-  //Look through the livingPeople array to find the first person who is also in the fathersArray.
-  //If there are no living fathers return "false"
-  for (i=0; i< livingPeople.length; i++){
-    var name = livingPeople[i].name;
-    if(fathersArray.indexOf(name) > -1){
-      oldestLivingFather = name;
-      break;
-    }
-  }
-  
-  return oldestLivingFather;
-};
+  //Find the oldest living father
+  var oldestLivingFatherObject = _.max(fathers, 'age');
 
+  //Grab his name
+  var oldestLivingFather = oldestLivingFatherObject.name;
+
+  console.log(oldestLivingFather);
+  return oldestLivingFather;
+
+};
