@@ -1,9 +1,17 @@
 var oldestLivingFather = function(people){
-  var livingPeople = [],
+  var fathersArray = [],
+      livingPeople = [],
       oldestLivingFather = 'There are no living fathers';
 
   //Find all the fathers and push their names to the fathersArray
-  var fathersArray = _.pluck(people, 'father');
+  for(i=0; i< people.length; i++){
+    var father = people[i].father;
+    if (father !== undefined){
+      if (fathersArray.indexOf(father) == -1){
+      fathersArray.push(father);
+      }
+    }
+  }
 
   //Find all the living people and push them to the livingPeople array
   for(i=0; i<people.length; i++){
@@ -29,4 +37,3 @@ var oldestLivingFather = function(people){
 
   return oldestLivingFather;
 };
-
