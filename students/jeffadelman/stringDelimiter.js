@@ -1,11 +1,12 @@
 var stringDelimiter = function(inputStr, limitingChar) {
   var delimited = [];
   while(inputStr.indexOf(limitingChar) !== -1) {
-    var str = (inputStr.substr(0, inputStr.indexOf(limitingChar)));
-    if (str) {
-      delimited.push(str);
+    var firstChar = inputStr.indexOf(limitingChar),
+        partialStr = (inputStr.substr(0, firstChar));
+    if (partialStr) {
+      delimited.push(partialStr);
     }
-    inputStr = inputStr.slice(inputStr.indexOf(limitingChar)+1);
+    inputStr = inputStr.slice(firstChar + 1);
   }
   if (inputStr){
     delimited.push(inputStr);

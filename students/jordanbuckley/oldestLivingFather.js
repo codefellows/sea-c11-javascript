@@ -1,17 +1,8 @@
 function oldestLivingFather(people) {
-  var fatherNames = [];
   var fatherArray = [];
-  var oldestAge = 0;
-  var theOldestLivingFather;
   
-  // Find names of fathers
-  for (var i = 0; i < people.length; i++) {
-    if (people[i].father) {
-      fatherNames.push(people[i].father);
-    }
-  }
-  // Remove duplicate names
-  fatherNames = _.uniq(fatherNames);
+  // Find names of fathers & remove duplicates
+  var fatherNames = _.uniq(_.pluck(_.filter(people, 'father'), 'father'));
   
   // Build array of fathers
   for (var i = 0; i < people.length; i++) {
@@ -20,12 +11,6 @@ function oldestLivingFather(people) {
     }
   }
   
-  // Find oldest living father
-  for (var i = 0; i < fatherArray.length; i++) {
-    if (fatherArray[i].age > oldestAge ) {
-      oldestAge = fatherArray[i].age;
-      theOldestLivingFather = fatherArray[i];
-    }
-  }
-  return theOldestLivingFather.name;
+  // Return oldest living father's name
+  return _.max(fatherArray, 'age').name;
 }
