@@ -1,17 +1,5 @@
 
 
-var highestAge = 0
-		function oldestPerson () {
-	for (var i = 0; i < people.length; i++) {
-	if (people[i].age && people[i].age > highestAge) {
-				highestAge = people[i].age;
-			}
-		}
-
-		return highestAge;
-		};
-
-
 var fathers = []
 function getFathersNames() {
 	for (var i = 0; i < people.length; i++) {
@@ -25,61 +13,32 @@ function getFathersNames() {
 	return fathers;
 };
 
-
+//returning the highest age of the father
 var highestAge = 0
+var personName
 people.forEach(function(person){
-	var personName = person['name']
+	personName = person['name']
 	var fatherArray = getFathersNames()
-for (var i = 0; i < people.length; i++) {
-	if (fatherArray.indexOf(personName) > -1 && people[i].age && people[i].age > highestAge) {
-				highestAge = people[i].age;
+if (fatherArray.indexOf(personName) > -1 && person['age'] > highestAge) {
+	 {
+				highestAge = person.age;
 			}
-		}
-return highestAge 
-	
-});
-
-		> -1 && person['age'] === oldestAge){
-		var oldestFatherName = person['name'];
-}
-return oldestFatherName
+	}
+return highestAge
 });
 
 
-people.forEach(function(person){
-	var personName = person['name']
-	var fatherArray = getFathersNames()
-	var oldestAge = oldestPerson()
-	if (fatherArray.indexOf(personName) > -1 && person['age'] === oldestAge){
-		var oldestFatherName = person['name'];
-}
-return oldestFatherName
-});
 
+//highest age of any person
 var highestAge = 0
-people.forEach(function(person){
-	var personName = person['name']
-	var fatherArray = getFathersNames()
-	if (fatherArray.indexOf(personName) > -1) {
-for (var i = 0; i < people.length; i++) {
+		function oldestPerson () {
+	for (var i = 0; i < people.length; i++) {
 	if (people[i].age && people[i].age > highestAge) {
 				highestAge = people[i].age;
 			}
 		}
-return highestAge
-	} 
-	
-});
 
+		return highestAge;
+		};
 
-var highestAge = 0
-people.forEach(function(person){
-	var personName = person['name']
-	var fatherArray = getFathersNames()
-	var fatherArrayDetails = []
-	people.filter(function(person) 
-		fatherArrayDetails.push(person)
-		return fatherArrayDetails
-	});
-});
-
+		
