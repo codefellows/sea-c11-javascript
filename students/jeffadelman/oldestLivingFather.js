@@ -21,7 +21,9 @@ var oldestLivingFather = function(){
   }
 
   //Sort the livingPeople array by age
-  livingPeople.sort(function(a,b) { return parseFloat(b.age) - parseFloat(a.age); } );
+  livingPeople.sort(function(a,b) { 
+    return parseFloat(b.age) - parseFloat(a.age); 
+  });
 
   //Look through the livingPeople array to find the first person who is also in the fathersArray.
   //If there are no living fathers return "There are no living fathers."
@@ -35,6 +37,3 @@ var oldestLivingFather = function(){
 
   return oldestLivingFather;
 };
-  
-oldestLivingFather(people);
-// -> 'Don'
