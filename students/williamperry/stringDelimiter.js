@@ -30,6 +30,5 @@ function stringDelimiter(inputString, delimiter) {
 var inputString = 'asdf$lskd1234$asdo'
 
 //defined a variable as something to console.log
-var finalResult = stringDelimiter(inputString, 'k');
+var finalResult = stringDelimiter(inputString, '$');
 
-console.log(finalResult);
