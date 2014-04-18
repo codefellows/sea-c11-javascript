@@ -14,7 +14,6 @@ var oldestLivingFather = function(input){
   //Grab his name
   var oldestLivingFather = oldestLivingFatherObject.name;
 
-  console.log(oldestLivingFather);
   return oldestLivingFather;
 
 };
