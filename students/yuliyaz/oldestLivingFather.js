@@ -16,15 +16,17 @@ function getFathersNames() {
 //returning the highest age of the father
 var highestAge = 0
 var personName
+var oldestFather
 people.forEach(function(person){
 	personName = person['name']
 	var fatherArray = getFathersNames()
 if (fatherArray.indexOf(personName) > -1 && person['age'] > highestAge) {
 	 {
-				highestAge = person.age;
+				highestAge = person['age'];
+				oldestFather = person['name']
 			}
 	}
-return highestAge
+return oldestFather
 });
 
 
