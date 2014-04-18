@@ -1,6 +1,27 @@
-var sampleInput = "375702374027184027"
+function stringDelimiter(inputString, delimiter) {
+    
+   
+    var results = [];
+    var newString = '';
+    
+    for (var i = 0; i < inputString.length; i++) {
+        if (inputString[i] === delimiter) {
+            results.push(newString);
+            newString = '';
+            
+        } else {
+            newString += inputString[i];
+        }
+    }
+    if (results.length) {
+        results.push(newString);
+    }
+    return results;
+}
 
-var mySplitResult = myString.split("0")
+var inputString = 'asdf$lskd1234$asdo'
 
-document.write("Value one is" + mySplitResult[0]);
-document.write("<br /> Value two is" + mySplitResult[1]);
+var finalResult = stringDelimiter(inputString, '$');
+
+console.log(finalResult);
+console.log(finalResult.length);
