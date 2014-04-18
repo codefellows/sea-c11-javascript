@@ -22,7 +22,7 @@ var oldestLivingFather = function(people){
 
   //Sort the livingPeople array by age
   livingPeople.sort(function(a,b) { 
-    return parseFloat(b.age) - parseFloat(a.age); 
+    return parseInt(b.age) - parseInt(a.age); 
   });
 
   //Look through the livingPeople array to find the first person who is also in the fathersArray.
@@ -37,3 +37,4 @@ var oldestLivingFather = function(people){
 
   return oldestLivingFather;
 };
+
