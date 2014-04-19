@@ -4,7 +4,7 @@ function Add(x, y) {
 }
 
 function countDecorator(fn) {
-	if (typeof counter === 'undefined') var counter = 0;
+	var counter = counter || 0;
 	
 	return function () {
 		if (arguments.length) {
