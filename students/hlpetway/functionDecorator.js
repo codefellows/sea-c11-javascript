@@ -1,20 +1,20 @@
-function Add(x, y) {
-    console.log((x + y));
-}
-
-function countDecorator(fn) {
+function countDecorator() {
     var n = 1;
-    return function () {
-        console.log(n++);
+    return {
+        count: function () {
+            console.log(n++)
+        },
+
+        add: function Add(x, y) {
+            console.log((x + y))
+        },
+
     };
 }
 
 var addCallCount = countDecorator();
 
-Add(1, 1);
-
-addCallCount();
-
-Add(2, 2);
-
-addCallCount();
+addCallCount.add(1, 1);
+addCallCount.count();
+addCallCount.add(1, 2);
+addCallCount.count();
