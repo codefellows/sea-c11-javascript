@@ -2,19 +2,19 @@
 function Add(x, y) {
   return x + y; 
 }
-var counter = counter || 0;
+
 function countDecorator(fn) {
+	if (typeof counter === 'undefined') var counter = 0;
 	
-	return function (x,y) {
-		if (x && y) {
-			counter += 1;
-			return fn.call (this,x,y);
+	return function () {
+		if (arguments.length) {
+			counter++;
+			return fn.apply (this,arguments);
 		} else {
-			return counter
+			return counter;
 		}
 	}
 }
 
-var addCallCount = countDecorator(Add);
 var Add = countDecorator(Add);
 
