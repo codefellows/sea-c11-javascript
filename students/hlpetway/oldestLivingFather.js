@@ -29,4 +29,4 @@ var oldestLivingFather = function () {
     return oldestLivingFather;
 };
 
-console.log(oldestLivingFather());
+oldestLivingFather();
