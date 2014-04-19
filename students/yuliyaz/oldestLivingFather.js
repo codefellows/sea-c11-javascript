@@ -13,34 +13,22 @@ function getFathersNames() {
 	return fathers;
 };
 
-//returning the highest age of the father
 var highestAge = 0
-var personName
 var oldestFather
+function oldestLivingFather(){
 people.forEach(function(person){
-	personName = person['name']
+	var personName = person['name']
+	var personAge = person['age']
 	var fatherArray = getFathersNames()
 if (fatherArray.indexOf(personName) > -1 && person['age'] > highestAge) {
 	 {
-				highestAge = person['age'];
-				oldestFather = person['name']
+				highestAge = personAge;
+				oldestFather = personName;
 			}
 	}
-return oldestFather
+
 });
+return oldestFather + ' is oldest father and he is ' + highestAge
+}
 
 
-
-//highest age of any person
-var highestAge = 0
-		function oldestPerson () {
-	for (var i = 0; i < people.length; i++) {
-	if (people[i].age && people[i].age > highestAge) {
-				highestAge = people[i].age;
-			}
-		}
-
-		return highestAge;
-		};
-
-		
