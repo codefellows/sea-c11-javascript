@@ -5,15 +5,16 @@ function Add(x, y) {
 
 function countDecorator(fn) {
 	var counter = counter || 0;
-	
-	return function () {
-		if (arguments.length) {
-			counter++;
-			return fn.apply (this,arguments);
-		} else {
-			return counter;
-		}
+
+	function forward() {
+		counter++;
+		return fn.apply (this,arguments);
 	}
+	
+	forward.callCount = function() {
+		return counter;
+	}
+	return wrapper;
 }
 
 var Add = countDecorator(Add);
