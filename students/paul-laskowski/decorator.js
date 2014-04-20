@@ -14,7 +14,7 @@ function countDecorator(fn) {
 	forward.callCount = function() {
 		return counter;
 	}
-	return wrapper;
+	return forward;
 }
 
 var Add = countDecorator(Add);
