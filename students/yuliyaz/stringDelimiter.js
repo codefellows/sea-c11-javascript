@@ -1,7 +1,3 @@
-
-var sampleInput = 'asdf$lskd1234$asdo'
-var arrayOfStrings = []
-var beginPosition = 0
 function stringDelimiter (){
 for (var i = 0; i <= sampleInput.length; i++ ) {
 	if (sampleInput[i] == '$' ){
