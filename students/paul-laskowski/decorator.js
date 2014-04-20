@@ -1,8 +1,4 @@
 
-function Add(x, y) {
-  return x + y; 
-}
-
 function countDecorator(fn) {
 	var counter = counter || 0;
 
@@ -16,6 +12,4 @@ function countDecorator(fn) {
 	}
 	return forward;
 }
-
-var Add = countDecorator(Add);
 
