@@ -4,7 +4,7 @@ function countDecorator(fn) {
     count++;
     return fn.apply(this, arguments)
   }
-  wrapper.count = function() {
+  wrapper.callCount = function() {
     return count;
   }
   return wrapper;
