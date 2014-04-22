@@ -1,0 +1,35 @@
+body {
+    width: 600px;
+    margin: 0 auto;
+    padding: 200px 0;
+    font-family:'Helvetica Neue', 'Helvetica', Arial, sans;
+}
+.tab {
+    border: 1px solid #EEE;
+    border-bottom: none;
+    position: relative;
+    background-color: white;
+    margin-right: 10px;
+    float: left;
+}
+.tab.active {
+    border-color: #999;
+    top: 1px;
+}
+.tab-link {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #AAA;
+}
+.tab.active .tab-link {
+    color: #333;
+}
+.tab-content-area {
+    border: 1px solid #999;
+    clear: both;
+    padding: 20px;
+}
+.hidden {
+    display: none;
+}
