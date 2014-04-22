@@ -2,6 +2,8 @@
 
 Contents:
 
+functionDecorator.js : function that accepts a function as an argument and tracks how many times the function was called.
+
 oldestLivingFather.js : function that accepts array of objects (people) and returns the name of the oldest living father.
 
 stringDelimiter.js : function that takes in a string seperated by a seperator and returns an array of strings in between the seperators.
