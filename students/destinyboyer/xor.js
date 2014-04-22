@@ -1,7 +1,3 @@
-var firstName,
-	lastName;
-
-
 function isEmptyString(stringtoCheck){
 	if (!!stringtoCheck){
 		return true;
