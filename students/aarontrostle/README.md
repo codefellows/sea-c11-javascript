@@ -15,4 +15,10 @@ I love building things and I love the web. Thanks for reading!
 * [Github](http://github.com/aatrostle)
 * [Twitter](http://twitter.com/aarontrostle)
 
+### Problems solved
 
+* [Exclusive Or (XOR)](https://github.com/aatrostle/sea-c11-javascript/blob/master/students/aarontrostle/xor.js) - [prompt](https://gist.github.com/hankyates/9680217)
+* [String Delimiter](https://github.com/aatrostle/sea-c11-javascript/blob/master/students/aarontrostle/stringDelimiter.js) - [prompt](https://gist.github.com/hankyates/10230737)
+* [Oldest Living Father](https://github.com/aatrostle/sea-c11-javascript/blob/master/students/aarontrostle/oldestLivingFather.js) - [prompt](https://gist.github.com/hankyates/9680467)
+* [Function Decorator](https://github.com/aatrostle/sea-c11-javascript/blob/master/students/aarontrostle/decorator.js) - [prompt](https://gist.github.com/hankyates/9680619)
+* [jQuery Tabs](https://github.com/aatrostle/sea-c11-javascript/tree/master/students/aarontrostle/tabs) - [prompt](http://jsfiddle.net/ZFk49/2/)
