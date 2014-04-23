@@ -24,7 +24,7 @@ var tabber = function( containerSelector ){
 		// Now let's rig up the behavior
 		$tabLinks.on('click.tabs', function(e){
 			e.preventDefault();
-			var $tab = $(e.target).parent(),
+			var $tab = $(e.target).closest(tabSelector),
 				$tabContentContainer = $tab.find(tabContentSelector);
 
 			// Replace content
