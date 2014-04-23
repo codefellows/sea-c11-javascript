@@ -1,6 +1,3 @@
-var sampleInput = 'asdf$1skd1234$asdo';
-var delimiter = '$';
-
 function stringDelimiter (sampleInput, delimiter) {
 
 var delPosition;
