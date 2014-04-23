@@ -1,13 +1,14 @@
 var countDecorator = function(func) {
     var count = 0;
     console.log("counter in the outside function: " + count); 
-    function change(val) {
-        //count++;
-        count = count + val;
+    function change() {
+        count++;
+        //count = count + val;
         console.log("counter in the closure: " + count);
+        return count;
     }
-    
-    return change(2);
+    change();
+    console.log(count);
     
 }
 //console.log(countDecorator());
