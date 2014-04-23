@@ -1,0 +1,21 @@
+nav ul {
+  padding: 0px;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+.wrapper {
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+.content {
+  display: none;
+}
+
+.active {
+  display: block;
+}
