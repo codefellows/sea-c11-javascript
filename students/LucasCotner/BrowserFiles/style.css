@@ -1,0 +1,39 @@
+a {
+    text-decoration: none;
+}
+a:drag {
+    
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.black {
+    color: black;
+}
+.red {
+    color: red;
+}
+li {
+    display: inline;
+}
+.tab {
+    padding: 3px;
+    display: inline;
+    border-radius: 6px;
+    text-align: center;
+    background-color: green;
+    opacity: 0.7;
+}
+.tabs2 {
+    display:
+}
+#articles {
+    display:none;
+}
+#home {
+    display:none;
+}
+#portfolio {
+    display:none;
+}
