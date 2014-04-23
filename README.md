@@ -11,6 +11,7 @@
 - [AJAX](https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started)
 - [Front-end Job Interview Questions](https://github.com/darcyclarke/Front-end-Developer-Interview-Questions)
   - Sometimes I'll read through this list and the first thing I don't know I go and learn about it.
+- [CSS Selectors](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started/Selectors)
 - [Career Cup](http://www.careercup.com/page?pid=amazon-interview-questions&sort=comments)
 
 ## Git remotes tutorial.
