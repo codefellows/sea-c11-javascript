@@ -9,9 +9,9 @@ $(document).ready(function () {
                 var target = $(this).attr('href');
                 $(target).addClass('active');
                 
-                $('.nav').removeClass('active');
-                var targetNav = $(this).attr('href');
-                $(targetNav).addClass('active');
+                $('.nav').removeClass('active-tab');
+                var targetNav = $(this);
+                $(targetNav).addClass('active-tab');
             });
         });
             

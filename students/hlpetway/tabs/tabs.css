@@ -28,7 +28,7 @@ a {
     border: 1px ridge #A3A375;
     border-radius: 4px 4px 0 0;
 }
- .active > .nav {
+ .active-tab {
     background-color: #5ECC5E;
     border-bottom-color: transparent;
 }
