@@ -14,6 +14,9 @@
 - [CSS Selectors](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started/Selectors)
 - [Career Cup](http://www.careercup.com/page?pid=amazon-interview-questions&sort=comments)
 
+## Ajax Assignment
+- [http://rs.hankyates.com:3000/content](http://rs.hankyates.com:3000/content)
+
 ## Git remotes tutorial.
 
 We need to start updating our local repositories with everyone else's changes. We can make this easy on ourselve by using [git's remotes feature](http://git-scm.com/book/en/Git-Basics-Working-with-Remotes). We are going to add this repository as a remote called `upstream`. Run the following command from within your repository:
