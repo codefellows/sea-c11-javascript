@@ -94,7 +94,8 @@ var TabsAjax = {
 			$contentArea = this.$tabContainer.find( contentAreaSelector );
 
 		// Now let's rig up the behavior
-		$tabLinks.on('click.tabs', function(e){
+		this.$tabContainer.on('click.tabs', tabLinkSelector, function(e){
+			
 			e.preventDefault();
 			var $tab = $(e.target).closest(tabSelector),
 				$tabContentContainer = $tab.find(tabContentSelector);
