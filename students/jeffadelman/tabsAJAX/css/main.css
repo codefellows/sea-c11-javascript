@@ -1,0 +1,53 @@
+a {
+    text-decoration: none;
+    font-size: 14pt;
+    font: Arial;
+    color: black;
+}
+
+a:hover {
+    color: silver;
+}
+
+body {
+    background-color: gray;
+    padding-left: 2px;
+}
+
+h1 {
+    font-family: "Futura", sans-serif;
+    color: #fff;
+}
+
+.hidden{
+    display: none;
+}
+
+li {
+    list-style: none;
+    float: left;
+    font-family: Arial;
+    padding: 10px 10px;
+    background-color: #bbbbFF;
+    margin-right: 2px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    clear: left;
+    padding: 10px 10px 20px 10px;
+    background-color: white;
+    width: 750px;
+}
+
+.showing {
+    display: inline-block;
+}
+
+.selected {
+    background-color: white;
+}
