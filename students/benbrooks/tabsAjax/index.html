@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>jQuery tabs assignment | Codefellows Foundations 2</title>
+		<meta name="description" content="Codefellows 2 jQuery tabs assignment">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<h1>jQuery Ajax Tabs Excercise</h1>
+
+		<div class="tabs">
+
+			<div class="spinner hidden-after-ready">
+				<div class="cube1"></div>
+				<div class="cube2"></div>
+			</div>
+
+			<div class="hidden-until-error">
+				Woops, problem retrieving those tabs. Sorry :(
+			</div>
+
+			<nav class="tab-nav hidden-until-success">
+				<!-- Tab markup will be injected here once it is retrieved -->
+			</nav>
+			<div class="tab-content-area hidden-until-success">
+				 <!-- Tab conent will be injected here as they are selected -->
+			</div> <!-- .tab-content-area -->
+
+		</div> <!--. tabs -->
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+		<script id="tab-template" type="x-tmpl-mustache">
+			<div class="tab">
+				<a href="#" class="tab-link">{{{tabTitle}}}</a>
+				<div class="tab-content hidden">
+					{{{tabContent}}}
+				</div>
+			</div>			
+		</script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
