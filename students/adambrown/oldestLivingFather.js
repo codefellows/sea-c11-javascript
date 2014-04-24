@@ -13,8 +13,6 @@ function oldestLivingFather(people){
         }
     });
   }); 
-  console.log(oldestLiving.age);
-  return oldestLiving.age;
-
+return oldestLiving.age;
 }
-oldestLivingFather(people);
+
