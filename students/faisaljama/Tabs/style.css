@@ -1,0 +1,39 @@
+body{
+			margin-top: 100px;
+			font-family: 'Trebuchet MS', serif;
+			line-height: 1.6
+		}
+		.container{
+			width: 800px;
+			margin: 0 auto;
+		}
+
+
+		ul.tabs{
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+		}
+		ul.tabs li{
+			background: none;
+			color: black;
+			display: inline-block;
+			padding: 10px 15px;
+			cursor: pointer;
+		}
+
+		ul.tabs li.current{
+			background: #336699
+			color: white;
+		}
+
+		.tab-content{
+			display: none;
+			background: #6699CC;
+			padding: 15px;
+            color: white;
+		}
+
+		.tab-content.current{
+			display: inherit;
+		}
