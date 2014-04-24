@@ -1,0 +1,13 @@
+$('a').on('click', function(event) {
+  event.preventDefault();
+  
+  $(this).closest('ul').find('li').removeClass('selected');
+  $(this).closest('li').addClass('selected');
+  
+  var loc = $(this).closest('li').find('div');
+  var contnt = loc.text();
+  $('#display').find('div').html(contnt);
+});
+
+
+

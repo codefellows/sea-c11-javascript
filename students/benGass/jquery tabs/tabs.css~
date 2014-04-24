@@ -1,0 +1,23 @@
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+ul {
+    border: 1px solid black;
+}
+li {
+    display: inline;
+    margin-right: 5px;
+}
+.noShow {
+    display:none;
+}
+#display {
+    border: 5px inset limegreen;
+    height: 200px;
+}
+.selected {
+  background-color: green;
+}
