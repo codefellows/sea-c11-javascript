@@ -84,12 +84,12 @@ var TabsAjax = {
 	enableTabBehavior: function(){
 
 		// Lets find all the stuff we'll need later on
+		var self = this;
 			tabSelector = '.tab',
 			tabLinkSelector = '.tab-link',
 			tabContentSelector = '.tab-content',
 			contentAreaSelector = '.tab-content-area',
 			activeTabClass = 'active',
-			$tabs = this.$tabContainer.find(tabSelector),
 			$tabLinks = this.$tabContainer.find(tabLinkSelector),
 			$contentArea = this.$tabContainer.find( contentAreaSelector );
 
@@ -97,8 +97,10 @@ var TabsAjax = {
 		this.$tabContainer.on('click.tabs', tabLinkSelector, function(e){
 			
 			e.preventDefault();
+			
 			var $tab = $(e.target).closest(tabSelector),
-				$tabContentContainer = $tab.find(tabContentSelector);
+				$tabContentContainer = $tab.find(tabContentSelector),
+				$tabs = self.$tabContainer.find(tabSelector);
 
 			// Replace content
 			$contentArea.html($tabContentContainer.html());
