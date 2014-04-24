@@ -1,6 +1,5 @@
 
 $( document ).ready(function() {
-	$('div.tabcontent').hide();
 	$('section.taboutput').html($('div#home').html());
 
 	$('ul.tablist li a').on('click', function (e) {

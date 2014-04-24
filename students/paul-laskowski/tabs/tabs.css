@@ -22,7 +22,7 @@ section.taboutput {
     min-height: 100px;
 }
 div.tabcontent {
-    // visibility: hidden; // didn't allow me to copy tabcontent to taboutput.
+    display: none;
 }
 ul.tablist {
     margin: 0;
