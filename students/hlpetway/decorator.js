@@ -10,3 +10,4 @@ function countDecorator(fn) {
         return counter;
     };
     return wrapper;
+}
