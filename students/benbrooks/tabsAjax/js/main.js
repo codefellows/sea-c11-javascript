@@ -1,28 +1,68 @@
-var tabSrc =  'http://rs.hankyates.com:3000/content';
-
 $(function(){
-	tabbify(tabSrc,'.tabs');
+	TabsAjax.init();
 });
 
+var TabsAjax = {
 
-var tabbify = function( url, containerSelector ){
-
-	var navSelector = '.tab-nav';
-	var uiDisplayDelay = 1500;
-	var $tabContainer = $(containerSelector);
-
-	var remoteTabRequest = $.getJSON(url);
-
-	remoteTabRequest.done(function(tabs){
-
-		// Get the template for our tabs
-		var tabTemplate = jQuery('#tab-template').html();
-		Mustache.parse(tabTemplate);
-	
-		// Define where we're going to inject our response
-		var $tabNavContainer = $tabContainer.find(navSelector);
-
+	init: function(){
 		
+		this.tabSrc = 'http://rs.hankyates.com:3000/content';
+		this.tabContainerSelector = '.tabs';
+		this.navContainerSelector = '.tab-nav';
+		this.uiDisplayDelay = 500;
+		this.requestResultClass = '';
+		this.tabTemplate = jQuery('#tab-template').html();
+		this.$tabContainer = $(this.tabContainerSelector);
+		this.$tabNavContainer = this.$tabContainer.find(this.navContainerSelector);
+
+		// Nowhere to put our tabs? Bail.
+		if( this.$tabContainer.length < 1 )
+			return;
+
+		// Parse our template to speed up repeated use
+		Mustache.parse(this.tabTemplate);
+
+		// Go get our data
+		var tabRequest = this.getRemoteTabJSON();
+		
+		var self = this;
+
+		// React to response
+
+		tabRequest.fail(function(){
+			self.requestResultClass = 'error';
+		});
+
+		tabRequest.done(function(data){
+			self.addRemoteTabs(data)
+			self.enableTabBehavior();
+			self.requestResultClass = 'success';
+		});
+
+		tabRequest.always(function(){
+			// Once we're all done with the request
+			// mark the container as ready to be shown
+			//  after a short delay for smoothness sake.
+			setTimeout(function(){
+
+				self.$tabContainer
+					.addClass(self.requestResultClass)
+					.addClass('ready');
+
+			}, self.uiDisplayDelay);
+		});
+
+	},
+
+
+	getRemoteTabJSON: function(){
+		return $.getJSON(this.tabSrc);
+	},
+
+	addRemoteTabs: function( tabs ){
+
+		var self = this;
+
 		// Produce a new tab from each key/value pair
 		$.each(tabs, function(tabTitle, tabContent){
 
@@ -31,49 +71,27 @@ var tabbify = function( url, containerSelector ){
 				tabContent: tabContent
 			};
 
-			var tabMarkup = Mustache.render(tabTemplate, tabData);
-			
-			$tabNavContainer.append(tabMarkup);
+			self.addTab(tabData);
 
 		});
+	},
 
-		// Rig up the behavior
-		enableTabBehavior(containerSelector);
+	addTab: function( tab ){
+		var tabMarkup = Mustache.render(this.tabTemplate, tab);
+		this.$tabNavContainer.append(tabMarkup);
+	},
 
-		// Signal UI ready, delay a bit for smoother UX
-		$tabContainer.addClass('success');
+	enableTabBehavior: function(){
 
-	});
-
-	remoteTabRequest.fail(function(){
-		$tabContainer.addClass('error');
-	});
-
-	remoteTabRequest.always(function(){
-		setTimeout(function(){
-			$tabContainer.addClass('ready');
-		}, uiDisplayDelay);
-	});
-
-};
-
-
-/**
- * Turns markup into a tabbed interface
- * @param  {str} containerSelector The selector of the object that wraps the tab markup
- */
-function enableTabBehavior( containerSelector ){
-
-	// Lets find all the stuff we'll need later on
-	var $tabContainer = $(containerSelector),
-		tabSelector = '.tab',
-		tabLinkSelector = '.tab-link',
-		tabContentSelector = '.tab-content',
-		contentAreaSelector = '.tab-content-area',
-		activeTabClass = 'active',
-		$tabs = $tabContainer.find(tabSelector),
-		$tabLinks = $tabs.find(tabLinkSelector),
-		$contentArea = $tabContainer.find( contentAreaSelector );
+		// Lets find all the stuff we'll need later on
+			tabSelector = '.tab',
+			tabLinkSelector = '.tab-link',
+			tabContentSelector = '.tab-content',
+			contentAreaSelector = '.tab-content-area',
+			activeTabClass = 'active',
+			$tabs = this.$tabContainer.find(tabSelector),
+			$tabLinks = this.$tabContainer.find(tabLinkSelector),
+			$contentArea = this.$tabContainer.find( contentAreaSelector );
 
 		// Now let's rig up the behavior
 		$tabLinks.on('click.tabs', function(e){
@@ -95,4 +113,6 @@ function enableTabBehavior( containerSelector ){
 		// Activate first tab
 		$tabLinks.first().click();
 
-}; // tabber()
+	},
+
+};
