@@ -1,19 +1,12 @@
 var countDecorator = function(func) {
-    var count = 0;
-    console.log("counter in the outside function: " + count); 
+    var count = 0; 
     function change() {
         count++;
-        //count = count + val;
-        console.log("counter in the closure: " + count);
-        return count;
+        return func.apply (this,arguments);
     }
-    change();
-    console.log(count);
     
-}
-//console.log(countDecorator());
-var first = countDecorator();
-//console.log(first);
-//item();
-console.log('');
-
+    change.callCount = function() {
+    	return count;
+    }
+    return change;
+};

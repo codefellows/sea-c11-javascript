@@ -22,4 +22,7 @@ $(document).ready(function() {
         $('#home').css("display","none");
         $('#articles').css("display","none");
     });
+    $('h1').on('click', function() {
+        $('#tigers').toggle();
+    });
 });
