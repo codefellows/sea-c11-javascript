@@ -1,0 +1,51 @@
+h1 {
+    font-family: Arial;
+    color:#122B12;
+    margin-bottom: 0px;
+}
+section {
+    background-color: #A3FF75;
+    height: 200px;
+    padding: 20px;
+    margin-top: 0px;
+    font-family: Arial;
+}
+ul {
+    margin-bottom: 5px;
+    margin-left: 0;
+    list-style: none;
+    font-family: Arial;
+}
+a {
+    display: block;
+    color: #333333;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 12px;
+    padding-left: 12px;
+    margin-right: 2px;
+    line-height: 18px;
+    border: 1px ridge #A3A375;
+    border-radius: 4px 4px 0 0;
+}
+ .active-tab {
+    background-color: #5ECC5E;
+    border-bottom-color: transparent;
+}
+li {
+    float: left;
+	margin-bottom: -1px;
+    line-height: 18px;
+}
+ul {
+    border-bottom: 1px solid #ddd;
+    display: table;
+    content:"";
+    clear: both;
+}
+.tab-content {
+    display: none;
+}
+.active {
+    display:block;
+}
