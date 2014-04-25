@@ -1,7 +1,3 @@
-function add(x, y) {
-	return x + y;
-}
-
 function countDecorator(fun) {
 	var count = 0;
 	function decorator () {
