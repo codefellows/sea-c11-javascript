@@ -14,7 +14,7 @@ body {
     padding-left: 2px;
 }
 
-h1 {
+h1, h2, h4 {
     font-family: "Futura", sans-serif;
     color: #fff;
 }
