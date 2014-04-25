@@ -11,7 +11,7 @@ $(document).ready(function(){
       $('#loading').remove();
       $.each(data, function(key, value){ 
         $('#tabs').append('<li><a href="#'+key+'">'+key.toUpperCase()+'</a></li>');
-        $('#output').append('<div id="'+key+'" class="tabContent hidden">'+value+'</div>'); 
+        $('#output').append('<div class="'+key+' hidden">'+value+'</div>'); 
       });
       $('#output div:first-child').addClass('showing');
       $('ul li:first-child').addClass('selected');
@@ -20,7 +20,7 @@ $(document).ready(function(){
         $('li').removeClass('selected');
         $(this).parent().addClass('selected');
         $('section div').removeClass('showing');
-        var content = $(this).attr('href');
+        var content = "."+$(this).text().toLowerCase();
         $(content).addClass('showing');
       });
     }
