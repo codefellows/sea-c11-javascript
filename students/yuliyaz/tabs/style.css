@@ -13,20 +13,21 @@ a:hover {
     list-style: none;
     height: 32px;
     /*--Set height of tabs--*/
-    /*border-bottom: 1px solid #999;
-    border-left: 1px solid #999;*/
+    /*--Gives the bevel look with a 1px white border inside the list item--*/
+    /*--Gives the bevel look with a 1px white border inside the list item--*/
     float:left;
 }
 .tabs li {
-display: inline;
+ 
+    border: 1px solid #AAA;
+    background: #ECECEC; 
+    display: inline-block;
 }
 .tabs li a {
     text-decoration: none;
     color: #000;
     font-size: 1.2em;
     padding: 0 20px;
-    border: 1px solid #fff;
-    /*--Gives the bevel look with a 1px white border inside the list item--*/
     outline: none;
 }
 ul.tabs li a:hover {
@@ -52,10 +53,8 @@ html ul.tabs li.active, html ul.tabs li.active a:hover {
     padding: 20px;
     font-size: 1.2em;
 }
-.spacing {
-    margin-left:90px;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-    border-right: 1px solid;
-    border-left: 1px solid #fff;
+.active {
+    background: #fff;
+    border-bottom: 1px solid #fff;
 }
+
