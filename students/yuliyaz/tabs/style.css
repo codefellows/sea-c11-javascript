@@ -1,0 +1,60 @@
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.red {
+    color: red;
+}
+.tabs {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+    height: 32px;
+    /*--Set height of tabs--*/
+    /*--Gives the bevel look with a 1px white border inside the list item--*/
+    /*--Gives the bevel look with a 1px white border inside the list item--*/
+    float:left;
+}
+.tabs li {
+ 
+    border: 1px solid #AAA;
+    background: #ECECEC; 
+    display: inline-block;
+}
+.tabs li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2em;
+    padding: 0 20px;
+    outline: none;
+}
+ul.tabs li a:hover {
+    background: #ccc;
+}
+html ul.tabs li.active, html ul.tabs li.active a:hover {
+    /*--Makes sure that the active tab does not listen to the hover properties--*/
+    background: #fff;
+    border-bottom: 1px solid #fff;
+    /*--Makes the active tab look like it's connected with its content--*/
+}
+.tab_content_container {
+    border: 1px solid #999;
+    border-top: none;
+    overflow: hidden;
+    clear: both;
+    float: left;
+    width: 100%;
+    background: #fff;
+}
+.tab_content {
+    display: none;
+    padding: 20px;
+    font-size: 1.2em;
+}
+.active {
+    background: #fff;
+    border-bottom: 1px solid #fff;
+}
+
