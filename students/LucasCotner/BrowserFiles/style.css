@@ -1,0 +1,33 @@
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+li {
+    display: inline;
+}
+ul {
+    text-align: center;
+}
+.tab {
+    padding: 5px;
+    display: inline;
+    border-radius: 10px;
+    background-color: green;
+    opacity: 0.7; 
+    position: relative;
+    right: 25px;
+}
+#home {
+    display:block;
+}
+#articles {
+    display:none;
+}
+#portfolio {
+    display:none;
+}
+#tigers {
+    display:none;
+}
