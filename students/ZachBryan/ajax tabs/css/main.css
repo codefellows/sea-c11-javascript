@@ -1,0 +1,51 @@
+a:hover {
+	color: green;
+}
+body {
+    background-color: #CAD4D4;
+}
+#tabs {
+	width: 100%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.25em; 
+}
+
+li {
+	list-style: none;
+	padding: .05em .05em;
+	height: 1.65em;
+	margin-right: .0125em;
+    float: left;
+    background-color: #669999
+}
+
+a {
+	padding: .25em 1.5em;
+	display: block;
+	border-left: .025em; 
+	border-top: .025em; 
+	border-right: .025em;
+	margin-right: .25em;
+	text-decoration: none;
+
+}
+
+section{
+    clear: both;
+	border: .05em;
+	border-top: none;
+	padding: .125em;
+    background-color: white;
+    width: 100%;
+}
+.active{
+	background-color: white;
+	padding-top: .25em;
+}
+.hidden {
+            display:none;
+}
+ 
+.show {
+            display:block;
+}
