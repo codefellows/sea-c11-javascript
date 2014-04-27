@@ -8,21 +8,26 @@ $(document).ready(function(){
       $('section').append('<h2>OOPS!</h2><br><br><h4>Something seems to have gone wrong.</h4>')
     },
     success: function(data){
+      //remove "loading" gif
       $('#loading').remove();
+      //create tabs and hidden dom views
       $.each(data, function(key, value){ 
-        $('#tabs').append('<li><a href="#'+key+'">'+key.toUpperCase()+'</a></li>');
-        $('#output').append('<div class="'+key+' hidden">'+value+'</div>'); 
+        $('#tabs').append('<li data-tab="'+key+'"><a href="#'+key+'">'+key.toUpperCase()+'</a></li>');
+        $('#output').append('<div data-tab="'+key+'" class="hidden">'+value+'</div>'); 
       });
-      $('#output div:first-child').addClass('showing');
-      $('ul li:first-child').addClass('selected');
-      $('a').on('click', function(e) {
-        e.preventDefault();  
-        $('li').removeClass('selected');
-        $(this).parent().addClass('selected');
+      //load home view
+      $('div[data-tab="home"]').addClass('showing');
+      $('li[data-tab="home"]').addClass('selected');
+      //listen for #hash change and display new view
+      window.onhashchange = change;
+      function change(){
+        var hash = window.location.hash;
+        hash = hash.substring(hash.indexOf('#')+1);
         $('section div').removeClass('showing');
-        var content = "."+$(this).text().toLowerCase();
-        $(content).addClass('showing');
-      });
+        $('div[data-tab="'+hash+'"').addClass('showing');
+        $('li').removeClass('selected');
+        $('li[data-tab="'+hash+'"]').addClass('selected');
+      };
     }
   });  
 });
