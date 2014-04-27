@@ -5,6 +5,7 @@
 - [A re-introduction to JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
   - I re-read this every 3 months. It's fantastic.
 - [Prototypical Inheritance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
+- [Hoisting](http://code.tutsplus.com/tutorials/javascript-hoisting-explained--net-15092)
 - [MDN on closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures)
   - This article really helped me fully understand closures.
 - [Async](http://www.slideshare.net/clutchski/writing-asynchronous-javascript-101)
