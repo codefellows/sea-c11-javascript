@@ -1,5 +1,4 @@
-
-var preferredName = function(a, b){
-  return((a || b) && !(a && b)) ? a||b : false;
+var preferredName = function(nameA, nameB){
+  return((nameA || nameB) && !(nameA && nameB)) ? nameA||nameB : false;
 };
 

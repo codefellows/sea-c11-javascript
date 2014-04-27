@@ -10,8 +10,3 @@ var countDecorator = function (func) {
   wrapper.getCount = function() { return count; };
   return wrapper;
 };
-
-function add(x, y) {  return x + y; }
-
-//had to modify
-var add = countDecorator(add);
