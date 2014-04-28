@@ -1,27 +1,23 @@
-<div id="wrapper">
-    <div>
-         <h1>Nifty Tabs</h1>
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>tabs</title>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="tabs.css">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="tabs.js"></script>
+  </head>
+<body>
+    <div id="wrapper">
+         <h1>Nifty Tabs With JSON</h1>
         <hr />
-        <ul>
-            <li><a href="#home" class="nav active">Home</a>
-
-            </li>
-            <li><a href="#articles" class="nav">Articles</a>
-
-            </li>
-            <li><a href="#portfolio" class="nav">Portfolio</a>
-
-            </li>
-        </ul>
-    </div>
-    <section id="home" class="tab-content active">
-        <div>The home page is here. Lots of information about the home page.</div>
-    </section>
-    <section id="articles" class="tab-content">
-        <div>The articles are here. So many lovely Articles.</div>
-    </section>
-    <section id="portfolio" class="tab-content">
-        <div>The portfolio is here. Lots of Impressive Work.</div>
-    </section>
-</div>
+        <div id="tabs">
+            <ul></ul>
+            <div id="wrapSection">
+                <section id="content"></section>
+            </div>
+        </div>
+		</div>
+</body>
+</html>
