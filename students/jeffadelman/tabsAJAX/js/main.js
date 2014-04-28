@@ -12,23 +12,22 @@ $(document).ready(function(){
       $('#loading').remove();
       //create tabs and hidden dom views
       $.each(data, function(key, value){ 
-        $('#tabs').append('<li data-tab="'+key+'"><a href="#'+key+'">'+key.toUpperCase()+'</a></li>');
-        $('#output').append('<div data-tab="'+key+'" class="hidden">'+value+'</div>'); 
+        $('#tabs').append('<li data-tab="#'+key+'"><a href="#'+key+'">'+key.toUpperCase()+'</a></li>');
+        $('#output').append('<div data-tab="#'+key+'" class="hidden">'+value+'</div>'); 
       });
       //load home view
-      $('div[data-tab="home"]').addClass('showing');
-      $('li[data-tab="home"]').addClass('selected');
-      //listen for #hash change and display new view
-      window.onhashchange = change;
-      function change(){
-        var hash = window.location.hash;
-        hash = hash.substring(hash.indexOf('#')+1);
-        $('section div').removeClass('showing');
-        $('div[data-tab="'+hash+'"').addClass('showing');
-        $('li').removeClass('selected');
-        $('li[data-tab="'+hash+'"]').addClass('selected');
-      };
+      $('div[data-tab="#home"]').addClass('showing');
+      $('li[data-tab="#home"]').addClass('selected');
     }
-  });  
+  }); 
+  //listen for #hash change and display new view
+  window.onhashchange = change;
+  function change(){
+    var hash = window.location.hash;
+    $('section div').removeClass('showing');
+    $('div[data-tab="'+hash+'"').addClass('showing');
+    $('li').removeClass('selected');
+    $('li[data-tab="'+hash+'"]').addClass('selected');
+  }; 
 });
 
