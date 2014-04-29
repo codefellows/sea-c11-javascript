@@ -17,6 +17,7 @@
 
 ## Ajax Assignment
 - [http://rs.hankyates.com:3000/content](http://rs.hankyates.com:3000/content)
+- [http://rs.hankyates.com:3000/v2/content](http://rs.hankyates.com:3000/v2/content)
 
 ## Git remotes tutorial.
 
