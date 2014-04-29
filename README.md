@@ -14,6 +14,10 @@
   - Sometimes I'll read through this list and the first thing I don't know I go and learn about it.
 - [CSS Selectors](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started/Selectors)
 - [Career Cup](http://www.careercup.com/page?pid=amazon-interview-questions&sort=comments)
+ 
+## Tutorials
+- [Angular Videos](https://egghead.io/)
+- [Backbone Tutorial](http://adrianmejia.com/blog/2012/09/11/backbone-dot-js-for-absolute-beginners-getting-started)
 
 ## Ajax Assignment
 - [http://rs.hankyates.com:3000/content](http://rs.hankyates.com:3000/content)
