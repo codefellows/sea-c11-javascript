@@ -1,0 +1,25 @@
+.container {
+  max-width: 730px;
+}
+
+.tabs-image {
+  height: 150px;
+  width: 150px;
+  background: green;
+  color: #fff;
+  border-radius: 200px;
+  padding-top: 35px;
+  margin: 20px auto;
+}
+
+.rotate {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+nav {
+  margin-bottom: 20px;
+}

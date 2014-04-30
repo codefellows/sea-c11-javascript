@@ -1,0 +1,35 @@
+/*unselected list items*/
+.tabs li {
+float:left; /*list items horizontally*/
+border:1px solid black;
+overflow:hidden; /* hide bullets */
+background:lightgray; 
+}
+
+/*selected list item*/
+.tabs li.selected {
+background:white; 
+} 
+
+.tabs li a {
+text-decoration:none; /*remove underline*/
+color:black;
+padding:0 20px; /*spreads out the anchor text*/
+}
+
+/*unselected list item anchors during hover*/
+.tabs li a:hover {
+background:gray;
+}
+
+/*selected list item anchors during hover*/
+.tabs li.selected a:hover {
+background:white;
+}
+
+.tabOutputArea {
+border:1px solid black; 
+float:left; /*moves output area underneath tabs*/
+padding:0 10px;
+width:95%;
+}

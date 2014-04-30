@@ -1,27 +1,30 @@
-//Karl Gentner - CFF2 Javascript - oldestLivingFather function - 4/16/2014
+//Karl Gentner - CFF2 Javascript - oldestLivingFather function - 4/21/2014
 // This method accepts an array of people and returns the name of the oldest living father.
-
+//** based on some different approaches outlined in class by other class members.
 
 function oldestLivingFather (people){
-	var oldestFatherAge = -1;
-	var oldestLivingFath;
+  
+  // create an array of fathers
+  var dads = [];
+  for (var i = 0; i < people.length; i++){
+  // make sure that there are no undefined fathers & that each is unique
+    if ((typeof people[i].father !== 'undefined') && (dads.indexOf(people[i].father) === -1)){
+      dads.push(people[i].father);
+    }
+  }
+  
+  //compare 'dads' names with 'people' names
+  //and compare ages to find oldest living father
+  var oldestLivingFath = {age : -1};
+  var currentFath = {age: -1};
 
-	for (var i = 0; i < people.length; i++){
-		if (people[i].father !== undefined) { // Continue if current father is defined.
-			for (var j = 0; j <people.length; j++){
-				//If the name from inner loop is equal to the father from the outer loop,
-				//And if the age from the inner loop is defined,
-				//And if the age is older than the current oldestFatherAge,
-				//Then set the outer loop father to be the Oldest Living Father.
-				if ((people[j].name === people[i].father)
-					&& (people[j].age !== undefined)
-					&& (people[j].age > oldestFatherAge)){ 
-						oldestLivingFath = people[i].father; 
-			}
-		}
-	}
-}
-return oldestLivingFath;
+  for (i = 0; i < dads.length; i++){
+    currentFath = _.where(people, {'name': dads[i]})[0]; //LoDash _.where for finding names in 'people'
+    if (typeof currentFath !== 'undefined' && (currentFath.age > oldestLivingFath.age)){
+       oldestLivingFath = currentFath;
+    } 
+  }
+  return oldestLivingFath.name;
 }
 
 

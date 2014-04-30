@@ -1,0 +1,22 @@
+function oldestLivingFather(people) {
+    var fathers = {};
+    var livingPeople = {};
+
+    _.forEach(people, function(person) {
+        if (person.age) {
+            livingPeople[person.name] = person.age;
+            if (person.father) {
+                fathers[person.father] = null;
+            }
+        }
+    });
+
+    var oldest = null;
+    var oldestAge = 0;
+    _.forEach(fathers, function(age, firstName) {
+        if (livingPeople[firstName] > oldestAge) {
+            oldest = firstName;
+        }
+    });
+    return oldest;
+}
