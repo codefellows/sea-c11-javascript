@@ -1,0 +1,52 @@
+h1 {
+    text-shadow: 1px 3px 2px #999;
+    float: left;
+    overflow: hidden;
+    white-space: wrap;
+    margin: 5px;
+}
+.red {
+    color: red;
+}
+section.taboutput {
+    clear: both;
+    padding: 5px;
+    background-color: green;
+    border: 1px solid yellow;
+    border-radius: 3px;
+    padding-top: 15px;
+    min-height: 100px;
+}
+div#tabcontentlist {
+    display: none;
+}
+ul.tablist {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    float: right;
+    vertical-align: bottom;
+}
+ul.tablist li {
+    display: inline;
+    float: left;
+    overflow: hidden;
+    width: 5em;
+    height: 20px;
+    padding: 10px;
+    background-color: #A4D0C4;
+    border: 1px solid #9A9C9F;
+    border-radius: 3px;
+}
+ul.tablist li:hover {
+    background-color: #72C4B9;
+}
+ul.tablist li a {
+    text-decoration: none;
+    text-shadow: 0 0 8px #000;
+    color: yellow;
+}
+ul.tablist li a:hover {
+    text-decoration: none;
+}
