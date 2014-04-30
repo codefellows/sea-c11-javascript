@@ -1,26 +1,18 @@
-
 $.getJSON('http://rs.hankyates.com:3000/v2/content', function (data) {
-    var tabs = [];
-    var tabcontents = [];
+    var nav = [];
+    var navContent = [];
     $.each(data, function (key, val) {
-        console.log(val.name);
-        tabs.push("<li> <a href='#" + val.name +"'>" + val.name.charAt(0).toUpperCase() + val.name.slice(1) + "</a></li>");
-        //tabs.push("<li> <a href='#" + key +"'>" + key.charAt(0).toUpperCase() + key.slice(1) + "</a></li>");
-        tabcontents.push("<div id='" + val.name + "' class='tabcontent'>" + val.content + "</div>");
+        nav.push("<li> <a href='#" + val.name +"'>" + val.name.toUpperCase() + val.name.slice(val.name.length) + "</a></li>");
+        navContent.push("<div id='" + val.name + "' class='tabcontent'>" + val.content + "</div>");
     });
-
-    $('ul.tablist').html(tabs.join(""));
-    $('div#tabcontentlist').html(tabcontents.join(""));
-
-	$('section.taboutput').html($('div#home').html());
-
-	$('ul.tablist li a').on('click', function (e) {
-	    clicked = (e.target).href.split('#');
-	    clickedClass = 'div#' + clicked[1];
-
-	    $('section.taboutput').hide();
-	    $('section.taboutput').html($(clickedClass).html());
-	    $('section.taboutput').fadeIn();
+    $('ul.tabs').html(nav.join(""));
+    $('div#content').html(navContent.join(""));
+	$('section.output').html($('div#home').html());
+	$('ul.tabs li').on('click', function (e) {
+	    current = (e.target).href.split('#');
+	    currentClass = 'div#' + current[1];
+	    $('section.output').hide();
+	    $('section.output').html($(currentClass).html());
+	    $('section.output').show();
 	});
 });
-console.log('');
