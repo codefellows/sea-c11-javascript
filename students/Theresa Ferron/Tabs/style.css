@@ -1,0 +1,84 @@
+* { margin: 5px; padding: 5px; font-family: "ER Architekt", cursive, serif;
+}
+
+}
+div.container {
+    margin: 20px 0 0 20px;
+    width: 581px;
+   
+}
+h2 {
+    margin: 0 auto;
+    text-decoration: underline;
+    color: #483D8B;
+
+}
+}
+
+li, a { 
+    font: 16px/16px "cursive";
+    margin: 2px 2px;
+    border: 1px solid black;
+    border-radius: 0px;
+    overflow: hidden;
+    
+}
+
+#tabs {
+    overflow: hidden;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    float: left;
+    border-top; 1px solid padding: 1px;
+}
+
+#tabs li {
+    float: left;
+    list-style: none;
+    background: #EEE;
+    width: 111px;
+    padding-bottom: -5px;
+    overflow: hidden;
+    border-top: 1px solid #CCC;
+}
+
+#tabs li a {    
+    padding: 10px;
+    border-top: 3px solid #483D8B;
+    border-right: 2px solid #483D8B;
+    border-left: 1px solid #F0FFFF;
+    border-radius: 7px;
+    display: block;
+    background: #FFF;
+    
+    
+   
+}
+
+#tabs li:first-child a {
+    border-left: 1px solid #CCC;
+}
+
+#tab-content {
+    
+    border-left: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    border-top:1px solid #CCC:
+    width: 521px;
+    height: 550px;
+    margin-top: 15px;
+    -moz-border-radius: 0 0 5px 5px;
+    background: #EEE;
+}
+
+#tabs li a.active {
+    background: #FFF;
+    margin-bottom: -3px;
+}
+img {
+    border-style: groove;
+    border-width: 5px;
+    border-radius: 7px;
+    border-color:#483D8B;
+}

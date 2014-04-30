@@ -4,10 +4,14 @@ h1 {
     margin-bottom: 0px;
 }
 section {
+    height: 300px;
+    padding:5px 20px 10px 20px;
+    font-family: Arial;
+}
+#wrapSection {
+    clear: both;
     background-color: #A3FF75;
-    height: 200px;
-    padding: 20px;
-    margin-top: 0px;
+    height: 300px;
     font-family: Arial;
 }
 ul {
@@ -15,6 +19,14 @@ ul {
     margin-left: 0;
     list-style: none;
     font-family: Arial;
+    border-bottom: 1px solid #ddd;
+    float: left;
+}
+li {
+    float: left;
+    margin-bottom: -1px;
+    line-height: 18px;
+    border-bottom-color: transparent;
 }
 a {
     display: block;
@@ -23,29 +35,17 @@ a {
     padding-bottom: 8px;
     padding-right: 12px;
     padding-left: 12px;
-    margin-right: 2px;
     line-height: 18px;
-    border: 1px ridge #A3A375;
+    border: 1px solid #454545;
     border-radius: 4px 4px 0 0;
 }
- .active-tab {
+.active {
     background-color: #5ECC5E;
-    border-bottom-color: transparent;
+    border-radius: 4px 4px 0 0;
 }
-li {
-    float: left;
-	margin-bottom: -1px;
-    line-height: 18px;
-}
-ul {
-    border-bottom: 1px solid #ddd;
-    display: table;
-    content:"";
-    clear: both;
-}
-.tab-content {
+.contentHide {
     display: none;
 }
-.active {
+.activeContent {
     display:block;
 }
