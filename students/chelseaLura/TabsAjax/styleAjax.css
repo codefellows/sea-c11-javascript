@@ -1,0 +1,18 @@
+nav ul {
+    padding: 0px;
+}
+nav ul li {
+    display: inline-block;
+    text-decoration: none;
+}
+a {
+    text-decoration: none;
+}
+.tabContent {
+    display: none
+}
+.displayed {
+    display: block;
+}
+
+
