@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app='myApp'>
   <head>
     <meta charset="utf-8">
     <title>title</title>
@@ -10,16 +10,16 @@
   <body>
 <h1>Angular Tabs</h1>
 <div ng-controller='tabController'>
-	<div ng-show='tabs.length > 0'>
+	<div ng-show='!!tabs.length'>
 		<ul class='tablist'>
 			<li ng-repeat='tab in tabs'>
-				<a href='#{{tab.name}}' ng-click="showTab(tab)">{{tab.name}}</a>
+				<a href='#{{tab.name}}' ng-click="showTab(tab)">{{tab.name | capitalize}}</a>
 				<div id='tabcontentlist'>{{tab.content}}</div>
 			</li>
 		</ul>
 		<section class='taboutput'>{{activeTab.content}}</section>
 	</div>
 </div>
-
+<div align='center'><a href='http://jsfiddle.net/warmbowski/YT6VN/5/'>jsfiddle</a></div>
   </body>
 </html>
