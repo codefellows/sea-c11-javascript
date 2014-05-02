@@ -6,14 +6,11 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/main.css">
 
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
-    <nav id="holder">
+        <nav id="holder">
         <h1>Tabs</h1>
         <ul class="tabs">
             <li class="active">
@@ -23,12 +20,12 @@
             <li><a href="#" rel="#contents_3" class="tab">Tab 3</a></li>
         </ul>
         <div class="clear"></div>
-        <div class="tab_container">
+        <section class="tab_container">
             
-            <div id="contents_1" class="tab_contents active_tab">tab 1 content</div>
-            <div id="contents_2" class="tab_contents">tab 2 contents</div>
-            <div id="contents_3" class="tab_contents">tab 3 contents</div>
-        </div>
+            <div id="contents_1" class="contents show hidden">tab 1 content</div>
+            <div id="contents_2" class="contents hidden">tab 2 contents</div>
+            <div id="contents_3" class="contents hidden">tab 3 contents</div>
+        </section>
     </nav>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
