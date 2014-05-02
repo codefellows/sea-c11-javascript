@@ -1,0 +1,9 @@
+.tab-content {
+  position:relative;
+  min-height: 150px;
+  padding: 10px;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0 0 4px 4px;
+}
