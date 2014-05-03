@@ -1,8 +1,8 @@
-function countDecorator(fun) {
+function countDecorator(fn) {
 	var count = 0;
 	function decorator () {
 		count++;
-		return fun.apply(fun, argument);
+		return fn.apply(fn, argument);
 	}
 	decorator.count = function() {
 		return count;

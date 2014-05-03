@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>tabsLura</title>
+    <link rel="stylesheet" type="text/css" href="styleAngular.css">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap-rtl.min.css">
+</head>
+<body ng-app="tabsTable" ng-controller="TabsCtrl">
+<h1>Welcome</h1>
+<nav>
+    <ul class="tabButtons">
+        <li ng-repeat="tabs in tabButtons">
+            <a class="btn btn-default" href="#" ng-click="setActiveTab(tabs)">{{tabs.name}}</a>
+        </li>
+    </ul>
+</nav>
+<hr>
+<div class="contentContainer">
+    <div>{{activeTab.content}}</div>
+</div>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.7/angular.min.js"></script>
+<script type="text/javascript" src="mainAngular.js"></script>
+</body>
+</html>
