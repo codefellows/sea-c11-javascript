@@ -9,8 +9,8 @@
 <h1>Welcome</h1>
 <nav>
     <ul class="tabButtons">
-        <li ng-repeat="tabs in tabButtons">
-            <a class="btn btn-default" href="#" ng-click="setActiveTab(tabs)">{{tabs.name}}</a>
+        <li ng-repeat="tab in tabButtons">
+            <button class="btn btn-default" ng-click="setActiveTab(tab)">{{tab.name}}</button>
         </li>
     </ul>
 </nav>

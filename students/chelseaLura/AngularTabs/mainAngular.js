@@ -8,8 +8,8 @@ app.controller('TabsCtrl', function($scope, $http) {
             $scope.tabButtons = tabs
     })
 
-    $scope.setActiveTab = function(tabs){
-       $scope.activeTab = tabs;
+    $scope.setActiveTab = function(tab){
+       $scope.activeTab = tab;
     };
 
 });
