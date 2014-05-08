@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="TabsAngularJJB">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Tabs Angular: Jordan Buckley</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body ng-controller="TabsCtrl">
+
+	<div class="wrapper">
+
+		<h1 class="title">Tabs Angular: Jordan Buckley</h1>
+
+		<div class="preload" ng-show="tabs.length < 1">
+			<img src="preloader.gif">
+		</div>
+
+		<div ng-show="tabs.length > 0">
+			<!-- Navigation -->
+			<header>			
+				<div>
+					<nav>
+						<ul>
+							<!-- Tab links -->
+							<li ng-repeat="tab in tabs" id="{{tab.name}}">
+								<a href="" ng-class="{current: tab.name === activeTab.name}" ng-click="showTab(tab)">{{tab.name}}</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+
+			<!-- Tab content -->
+			<div class="main">
+				<content>
+					<div class="content">{{activeTab.content}}</div>
+				</content>
+			</div>
+			<!-- #main -->
+		</div>
+
+	</div>
+	<!-- #wrapper -->
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
