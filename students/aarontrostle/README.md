@@ -22,3 +22,6 @@ I love building things and I love the web. Thanks for reading!
 * [Oldest Living Father](https://github.com/aatrostle/sea-c11-javascript/blob/master/students/aarontrostle/oldestLivingFather.js) - [prompt](https://gist.github.com/hankyates/9680467)
 * [Function Decorator](https://github.com/aatrostle/sea-c11-javascript/blob/master/students/aarontrostle/decorator.js) - [prompt](https://gist.github.com/hankyates/9680619)
 * [jQuery Tabs](https://github.com/aatrostle/sea-c11-javascript/tree/master/students/aarontrostle/tabs) - [prompt](http://jsfiddle.net/ZFk49/2/)
+* [Ajax Tabs](https://github.com/aatrostle/sea-c11-javascript/tree/master/students/aarontrostle/ajax)
+* [Backbone.js Tabs](https://github.com/aatrostle/sea-c11-javascript/tree/master/students/aarontrostle/bbTabs)
+* [Angular.js Tabs](https://github.com/aatrostle/sea-c11-javascript/tree/master/students/aarontrostle/ngTabs)

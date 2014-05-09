@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <title>bbTabs</title>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.15/angular.min.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>ngTabs</h1>
+
+      <div ng-controller="TabsController">
+
+        <div class="loading" ng-show="tabs.length === 0">
+          Loading...
+        </div>
+
+        <ul id="menu" class="nav nav-tabs" ng-show="tabs.length > 0">
+          <li ng-repeat="tab in tabs" ng-class="{active: tab.name === activeTab.name}">
+            <a href="#" ng-click="showTab(tab)">{{ tab.name }}</a>
+          </li>
+        </ul>
+
+        <div id="content" class="tab-content">{{ activeTab.content }}</div>
+      </div>
+
+    </div>
+  </body>
+</html>
